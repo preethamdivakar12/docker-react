@@ -4,6 +4,8 @@ services:
 
 before_install:
   - docker build -t preethamdivakar/docker-react -f Dockerfile.dev .
+  - gem uninstall logger -aIx || true
+  - gem install logger -v 1.7.0
   - gem install bundler
 
 script:
